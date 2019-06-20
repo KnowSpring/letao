@@ -16,6 +16,11 @@
 .red{
 	color: #A94442;
 }
+.table.table-bordered th,
+.table.table-bordered td {
+	text-align: center;
+	vertical-align: middle;
+}
 
 a,
 a:link,
@@ -107,7 +112,7 @@ html,body{
 	padding-left: 180px;
 	width: 100%;
 	height: 100%;
-	background-color: pink;
+	/*background-color: pink;*/
 	padding-top: 50px;
 	transition: all 1s;
 }
@@ -136,4 +141,10 @@ html,body{
 	text-align: center;
 	color:#fff;
 
+}
+
+.echarts_1,
+.echarts_2{
+	width: 48%;
+	height: 400px;
 }

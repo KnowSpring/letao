@@ -72,7 +72,7 @@ $(function() {
   $('.icon_logout').click(function() {
     // 让模态框显示
     $('#logoutModal').modal("show");
-  })
+  });
 
   // 4. 在外面注册 logoutBtn 退出按钮, 点击事件
   $('#logoutBtn').click(function() {
