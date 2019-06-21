@@ -52,6 +52,7 @@ $(function(){
     $('.lt_content tbody').on('click','.btn',function(){
         $('#userModal').modal('show');
         currentId = $(this).parent().data('id');
+        console.log(currentId);
         isDelete = $(this).hasClass('btn-danger')? 0 : 1;
     });
     // 先解绑, 再绑定事件, 可以保证只有一个事件绑定在 按钮上

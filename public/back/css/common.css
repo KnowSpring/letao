@@ -16,6 +16,11 @@
 .red{
 	color: #A94442;
 }
+.dropdown_auto{
+	height: 250px;
+	overflow: auto;
+
+}
 .table.table-bordered th,
 .table.table-bordered td {
 	text-align: center;
@@ -128,6 +133,7 @@ html,body{
 	background-color: #3C8DBC;
 	padding-left: 180px;
 	transition: all 1s;
+	z-index: 888;
 }
 .lt_main .lt_topbar.menuHidden{
 	padding-left: 0;

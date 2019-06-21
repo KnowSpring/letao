@@ -53,7 +53,7 @@ $(function() {
   // 2. 点击添加分类按钮, 显示添加模态框
   $('#addBtn').click(function() {
     $('#addModal').modal("show");
-  })
+  });
 
 
   // 3. 通过校验插件, 添加校验功能

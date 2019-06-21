@@ -25,8 +25,8 @@
             <li>
                 <a href="javascript:;" id="category"><i class="glyphicon glyphicon-list"></i><span>分类管理</span></a>
                 <div class="child">
-                    <a href="first.html">一级分类</a>
-                    <a href="second.html" class="current">二级分类</a>
+                    <a href="first.html" >一级分类</a>
+                    <a href="second.html" class="current" >二级分类</a>
                 </div>
             </li>
             <li><a href="products.html"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
@@ -48,6 +48,35 @@
                 <li>二级分类</li>
 
             </ol>
+            <!--添加按钮-->
+            <button class="btn btn-default" id="addButton">添加分类</button>
+            <!--表格-->
+            <table class="table table-bordered table-hover mt-20">
+                <thead>
+                <tr>	
+                    <th width="10%">序号</th>
+                    <th width="30%">一级分类名称</th>
+                    <th width="30%">二级分类名称</th>
+                    <th width="30%">二级分类LOGO</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <!--<td>1</td>
+                    <td>女士馆</td>
+                    <td>阿萨德</td>
+                    <td><img height="50px" src="images/default.png" alt=""></td>-->
+                </tr>
+                </tbody>
+            </table>
+            <div class="text-right">
+                <ul id="paginator"></ul>
+            </div>
+
+
+
+
+
         </div>
     </div>
 
@@ -71,11 +100,78 @@
         </div>
     </div>
 </div>
+<!--添加分类模态框-->
+<div class="modal fade" tabindex="-1" id="addModal" >
+    <div class="modal-dialog modal-sm"  >
+        <div class="modal-content">
+            <form id="form" me>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>
+                    <h4 class="modal-title">添加分类</h4>
+                </div>
+                <div class="modal-body">
+                    <!--在booststrap找表单，要加上form-group，有了这属性在后会添加表单验证信息-->
+                   <div class="form-group">
+                       <div class="dropdown">
+                           <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" >
+                               <span class="firstCateBtn" >请选择一级分类</span>
+                               <span class="caret"></span>
+                           </button>
+                           <ul class="dropdown-menu dropdown_auto" id="firstCate"  >
+
+                           </ul>
+                       </div>
+                       <input type="hidden" name="categoryId">
+                       <!--扩展属性-->
+                       <input type="hidden" name="hot" value="1">
+                   </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="brandName"  placeholder="请输入二级分类">
+                    </div>
+                    <div class="form-group">
+                        <!--图片预览，通过label绑定-->
+                        <label class="btn btn-default" for="fileupload">上传图片</label>
+                        <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic" style="display: none" multiple>
+                    </div>
+                    <div class="form-group imgBox">
+                        <img style="height: 100px" src="images/none.png" alt="">
+                        <input type="hidden" name="brandLogo">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <!--需添加按钮改为submit提交信息和按钮要在form标签之内-->
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" id='addFirst' class="btn btn-primary">添加</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="firstTpl">
+    {{ each rows v i}}
+    <li data-id="{{ v.id }}"><a href="#">{{v. categoryName}}</a></li>
+    {{ /each }}
+</script>
+<script type = 'text/html' id="secondTpl">
+    {{ each rows v i}}
+    <tr>
+        <td>{{ i+1+(page-1)*size }}</td>
+        <td>{{ v.categoryName }}</td>
+        <td>{{ v.brandName }}</td>
+        <td><img height="50px" src="{{ v.brandLogo }}" alt=""></td>
+    </tr>
+    {{ /each}}
+</script>
 <script src="lib/jquery/jquery.js"></script>
 <script src="lib/bootstrap/js/bootstrap.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
 <script src="lib/nprogress/nprogress.js"></script>
-<script src="js/index.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+<script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
+<script src="js/second.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>
