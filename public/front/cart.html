@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body >
+<div class="lt_container">
+    <div class="lt_header">
+        <a href="javascript:history.go(-1);" class="icon_left"><i class="mui-icon mui-icon-back"></i></a>
+        <h3>购物车</h3>
+    </div>
+    <div class="lt_main">
+        <!--区域滚动-->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+                <ul id="OA_task_2" class="mui-table-view">
+                    <!--挖个坑-->
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="lt_footer">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+            <li><a href="category.html"><i class="fa fa-bars"></i><p>分类页</p></a></li>
+            <li><a href="cart.html"  class="current"><i class="fa fa-shopping-cart"></i><p>购物车</p></a></li>
+            <li><a href="user.html"><i class="fa fa-user"></i><p>用户中心</p></a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/html" id="cartTpl">
+    {{ each arr v i}}
+    <li class="mui-table-view-cell mui-transitioning cart_item" >
+        <div class="mui-slider-right mui-disabled">
+            <a  data-id= "{{ v.id }}"
+                data-num="{{ v.num }}"
+                data-productSize="{{ v.productSize}}"
+                data-size ="{{ v.size }}"
+                data-productNum="{{ v.productNum }}"
+                class="mui-btn mui-btn-primary mui-icon mui-icon-compose"
+                id="btn_edit" style="transform: translate(0px, 0px);"></a>
+            <a  data-id = {{v.id}} class="mui-btn mui-btn-danger mui-icon mui-icon-trash " id="btn_delete" style="transform: translate(-90px, 0px);"></a>
+        </div>
+        <div class="mui-slider-handle" style="transform: translate(0px, 0px);">
+            <div class="mui-table-cell">
+                <!--左侧图片-->
+                <div class="cart_img">
+                    <img src="{{ v.pic[0].picAddr }}" alt="">
+                    <input type="checkbox"/>
+                </div>
+                <!--内容-->
+                <div class="cart_info">
+                    <p class="pro_name">{{ v.proName}}</p>
+                    <p>
+                        <span class="price">¥{{ v.price}}</span>
+                        <span class="oldPrice">¥{{ v.oldPrice}}</span>
+                        <span class="mui-pull-right">{{ v.num }}双</span>
+                    </p>
+                    <p>鞋码：{{v.size}} </p>
+
+                </div>
+
+            </div>
+        </div>
+    </li>
+    {{ /each}}
+</script>
+
+<script type="text/html" id="editTpl">
+    <!-- 产品尺码 -->
+    <!-- 模板引擎: 原生语法, 在原生语法中可以直接编写 js 语句 -->
+    <div class="lt_pro_size">
+        尺码:
+        <%
+        var arr = productsize.split("-");  //  ["35", "45"]
+        var start = arr[0];   // 35
+        var end = arr[1];     // 45
+
+        for ( var i = start; i <= end; i++ ) {
+        %>
+        <span class="{{ i == size ? 'current': ''}}">{{ i }}</span>
+        <% } %>
+    </div>
+
+
+    <!-- 产品数量 -->
+    <div class="lt_num">
+        数量:
+
+        <!-- 数字框 -->
+        <!-- data-numbox-min 配置可输入的最小值,
+             data-numbox-max 配置可输入的最大值
+             data-numbox-step 配置步长, 点击 +- 号修改的个数
+         -->
+        <div class="mui-numbox" data-numbox-min="1" data-numbox-max="{{ productnum }}" data-numbox-step='1'>
+            <!-- "-"按钮，点击可减小当前数值 -->
+            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+            <input class="mui-numbox-input" type="number" value="{{ num }}" />
+            <!-- "+"按钮，点击可增大当前数值 -->
+            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+        </div>
+    </div>
+
+
+
+
+</script>
+
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/cart.js"></script>
+
+</body>
+</html>

@@ -66,7 +66,7 @@ $(function() {
       },
       dataType: "json",
       success: function( info ) {
-        console.log( info )
+        console.log( info );
         if ( info.success ) {
           // 添加成功, 弹出一个确认框
           mui.confirm( "添加成功", "温馨提示", ["去购物车", "继续浏览"], function( e ) {

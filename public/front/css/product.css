@@ -15,15 +15,7 @@
     text-decoration: line-through;
     font-size: 12px;
 }
-.lt_main .lt_pro_size span{
-    display: inline-block;
-    height: 25px;
-    width: 25px;
-    border: 1px solid #ccc;
-    line-height: 25px;
-    text-align: center;
-    font-size: 12px;
-}
+
 .lt_main .lt_pro_num span{
     font-size: 12px;
     color: #666;

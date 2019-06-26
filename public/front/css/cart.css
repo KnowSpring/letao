@@ -1,0 +1,27 @@
+.mui-table-cell{
+    display: block;
+}
+.cart_item .cart_img{
+    height: 90px;
+    width: 60px;
+    float: left;
+}
+.cart_item .cart_info{
+    overflow: hidden;
+    padding: 0 10px;
+}
+.cart_info .pro_name{
+    color: #000;
+}
+.cart_info .oldPrice{
+    text-decoration: line-through;
+}
+.cart_info .price{
+    color: red;
+}
+.lt_pro_size{
+    padding: 10px 0;
+}
+
+
+

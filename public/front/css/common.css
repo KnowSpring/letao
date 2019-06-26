@@ -153,6 +153,21 @@ img{
     right: 10px;
     border-radius: 0 5px 5px 0;
 }
+/*公共的尺寸样式*/
+ .lt_pro_size span{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #ccc;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+}
+.lt_pro_size span.current{
+    background-color: orange;
+    color: #fff;
+}
+
 
 
 
