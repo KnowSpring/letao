@@ -1,0 +1,49 @@
+.lt_category_left{
+    height:100%;
+    width:90px;
+    float:left;
+    /*让滚动区域以左边定位*/
+    position: relative;
+}
+.lt_category_left li a{
+    float: left;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #E3E4E5;
+    color: #666;
+}
+.lt_category_left a.current{
+    border: none;
+    background-color: #fff;
+}
+.lt_category_right{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+}
+.lt_category_right li {
+    /*不用设高*/
+    float: left;
+    width: 33.33%;
+    margin-bottom: 10px;
+}
+.lt_category_right li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.lt_category_right li img{
+    width: 70px;
+    margin: 0 auto;
+}
+.lt_category_right li p{
+    text-align: center;
+}
+.tips{
+    padding: 10px;
+}

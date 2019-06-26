@@ -1,0 +1,43 @@
+/*公共样式*/
+.item_box{
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+/*主体部分*/
+.lt_main .lt_pro_name{
+
+}
+.lt_main .lt_pro_price .price{
+    color: red;
+}
+.lt_main .lt_pro_price .oldPrice{
+    color: #666;
+    text-decoration: line-through;
+    font-size: 12px;
+}
+.lt_main .lt_pro_size span{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #ccc;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+}
+.lt_main .lt_pro_num span{
+    font-size: 12px;
+    color: #666;
+}
+
+/*页脚部分*/
+.lt_go_cart{
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid  red;
+    height: 55px;
+    width: 100%;
+    background-color: #EFEFF4;
+}
+.lt_go_cart a{
+    margin: 5px 0;
+}

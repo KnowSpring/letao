@@ -1,0 +1,32 @@
+
+.searchHistory .title{
+    padding: 10px;
+    font-size: 14px;
+    height: 30px;
+
+}
+.searchHistory .content{
+    padding: 10px;
+
+}
+.searchHistory .content ul{
+    border: 1px dashed red;
+}
+.searchHistory .content li{
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed red;
+}
+.searchHistory .content li:last-child{
+    border:none;
+}
+.searchHistory .content li a{
+
+}
+.searchHistory .content li i{
+    line-height: 30px;
+}
+.searchHistory p{
+    padding: 10px;
+}

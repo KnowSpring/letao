@@ -43,7 +43,7 @@ $(function() {
       },
       dataType: "json",
       success: function( info ) {
-        console.log( info )
+        console.log( info );
         var htmlStr = template("rightTpl", info);
         $('.lt_category_right ul').html( htmlStr );
       }
