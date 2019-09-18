@@ -1,4 +1,4 @@
-## 乐淘电商
+## 淘鞋项目
 
 ### 移动端
 
@@ -9,7 +9,7 @@
 - 学习官网 http://dev.dcloud.net.cn/mui/
 - 官方文档 http://dev.dcloud.net.cn/mui/ui/
 - 组件展示 http://dcloud.io/hellomui/
- 
+
 **特点**
 
 - 最接近原生APP体验的高性能前端框架
@@ -25,19 +25,19 @@ MUI以iOS平台UI为基础，补充部分Android平台特有的UI控件
 DIV动画经常出现卡顿现象（特别是图文列表的情况）； 
 mui通过双webview解决这个DIV的拖动流畅度问题；拖动时，拖动的不是div，
 而是一个完整的webview（子webview），回弹动画使用原生动画
-     
+  
      
 #### 首页
  - 充当移动端入口静态的
  - 搭建页面主体架子
- 
+
  具体到页面功能：
  1.顶部通栏
  2.轮播图
  3.导航栏
  4.运动生活专区
  5.底部页签
-   
+
 + 页面架子  
 ```html
 <!DOCTYPE html>
@@ -45,7 +45,7 @@ mui通过双webview解决这个DIV的拖动流畅度问题；拖动时，拖动�
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
-    <title>乐淘首页</title>
+    <title>淘鞋首页</title>
     <link rel="stylesheet" href="assets/mui/css/mui.css"/>
     <link rel="stylesheet" href="css/common.css"/>
 </head>
@@ -119,15 +119,15 @@ onerror="this.src = 'images/none.jpg' "
     + 点击情况历史记录  情况所有记录  （把本来存储的数据清空）
     
     需求  记录10数据  如果超过加一条 删一条  如果有一样的删除 记录新的
-     
+    
      
 #### 搜索列表页
-     
+
 - 静态页面
     + 搜索表单
     + 搜索排序
     + 搜索列表
-     
+    
 - 动态渲染
 
     + 效果
@@ -166,7 +166,7 @@ onerror="this.src = 'images/none.jpg' "
     3.渲染商品列表 当时是追加到页面当中  
     
 #### 商品详情页
-     
+
  - 静态页面  
     + 顶部通栏
     + 底部操作栏  以前是切换
@@ -183,11 +183,10 @@ onerror="this.src = 'images/none.jpg' "
     + 尺码选择
     + 数量选择
     + 加入购物车
-    
-    
+
 #### 登录
-    
-        
+
+
  - 静态页面   
     + 用户名
     + 密码
@@ -203,20 +202,19 @@ onerror="this.src = 'images/none.jpg' "
         {error: 400, message: "未登录！"}
       ```
 #### 用户中心
-    
+
     - 静态页面 
-        
+
     - 动态渲染 
         + 获取个人信息并且展示
         + 点击退出按钮进行退出   
-           
+
 #### 购物车
 
 - 静态页面
     + 商品列表
     + 订单
- 
-    
+
 - 动态渲染 
     + 初始化  展示购物车中的商品
     + 删除购物车当中的商品
@@ -225,12 +223,12 @@ onerror="this.src = 'images/none.jpg' "
 
 
 ### 后台管理端
-    
+
     目录结构：后台的目录全部在admin目录下面
-    
+
     页面基本模板
-    
-    ```
+
+    ​```
     <!DOCTYPE html>
     <html>
     <head lang="en">
@@ -240,19 +238,19 @@ onerror="this.src = 'images/none.jpg' "
         <link rel="stylesheet" href="css/admin.css"/>
     </head>
     <body>
-    
-    
+
+
     <script src="assets/jquery/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/admin.js"></script>
     </body>
     </html>
     
-    ```
-    
+    ​```
+
 #### 登录
  - 静态的页面
-    
+   
  - 动态交互
     + 前端校验功能
     1.用户名不能为空
@@ -307,12 +305,12 @@ onerror="this.src = 'images/none.jpg' "
     更新为给定字段验证器的结果，status可以 NOT_VALIDATED, VALIDATING, INVALID或 VALID，validatorName 字符串 验证器的名称。如果 null所有验证器,更新方法有效性的结果
     
     ```
-      
+    
  -  基于jquery的前端进度插件 《nprogress》     
     + 文档参考 http://blog.csdn.net/joyhen/article/details/24458427
     
     
-    
+    ​
 #### 管理主体结构
  - 静态的页面
     + 侧边栏
@@ -347,8 +345,7 @@ onerror="this.src = 'images/none.jpg' "
      + 基于bootstrap的分页插件  bootstrap-paginator 
    - 禁用某个用户
    - 启用某个用户
-    
-      
+
 
 
 
